@@ -1,0 +1,30 @@
+#--------
+# GENERAL
+#--------
+
+prefix : "."
+description : "NoctaneBuilds"
+path: ""
+cogs_path : "cogs"
+error_timeout: 10
+
+#------
+# GUILD
+#------
+
+# Channels
+staff_channel_id: 843078925109690378
+support_channel_id: 858089548256641064
+support_notify_channel_id: 843078925109690378
+music_channel_id: 843078925109690378
+ticket_channel_id: 864081563951431680
+captcha_channel_id: 865530660378771468
+join_channel_id: 843078925109690378
+bot_spam_id: 843078925109690378
+
+# Categories
+ticket_category_id: 864083901676126208
+
+# Roles
+join_role_id: 842125244563062834
+support_role_id: 858090235321909248
