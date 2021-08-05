@@ -21,3 +21,12 @@ ping_permission:
 
 log_permission:
   - 858090235321909248
+
+kick_permission:
+  - 858090235321909248
+
+clear_permission:
+  - 858090235321909248
+
+sclear_permission:
+  - 858090235321909248

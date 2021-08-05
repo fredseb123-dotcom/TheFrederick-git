@@ -19,7 +19,7 @@ def load_cfg(item):
     """Zisk aktuálních konfiguračních dat"""
 
     try:
-        with open("config/config.yml") as file:
+        with open("config/config.yml", "r") as file:
             item = yaml.load(file, Loader=yaml.FullLoader)[item]
         return item
     except KeyError:
@@ -28,9 +28,12 @@ def load_cfg(item):
         print("Config >> Configurační soubor nenalezen")
     return None
 
+
 def load_radio(item):
+    """Načtení rádiostanic"""
+
     try:
-        with open("config/radios.yml") as file:
+        with open("config/radios.yml", "r") as file:
             item = yaml.load(file, Loader=yaml.FullLoader)[item]
         return item
     except KeyError:
@@ -39,11 +42,12 @@ def load_radio(item):
         print("Radios >> Configurační soubor nenalezen")
     return None
 
+
 def chperm(roles, permisson):
     """Ověření práv pro provedení operace"""
 
     try:
-        with open("config/perms.yml") as file:
+        with open("config/perms.yml", "r") as file:
             perm = yaml.load(file, Loader=yaml.FullLoader)[permisson]
             for role in roles:
                 if role.id in perm:
@@ -54,7 +58,10 @@ def chperm(roles, permisson):
     except FileNotFoundError:
         print("Perms >> Soubor s právy nenalezen")
 
+
 def start_seq():
+    """Grafický výstup při zapnutí"""
+
     with open("images/logo.txt", "r") as file:
         img = file.readlines()
 
@@ -62,13 +69,30 @@ def start_seq():
         "*": "\u001b[38;5;172m*\u001b[0m",
         "@": "\u001b[37;1m@\u001b[0m",
         "%": "\u001b[30;1m%\u001b[0m",
-        ".": "\u001b[38;5;224m&\u001b[0m",
+        ".": "\u001b[38;5;224m.\u001b[0m",
         "&": "\u001b[38;5;223m&\u001b[0m",
     }
 
     final = []
     for row_num in range(0, len(img) - 1):
-        final.append("".join([coloring[x] if x in coloring else x for x in img[row_num]]))
+        final.append(
+            "".join([coloring[x] if x in coloring else x for x in img[row_num]])
+        )
     for elem in final:
         print(elem, end="\r")
         sleep(0.05)
+    print("\n┌────┬───────────────────────────")
+
+def side_by_side(strings, size=15, space=4):
+    result = []
+
+    while any(strings):
+        line = []
+
+        for i, s in enumerate(strings):
+            line.append(s[:size].ljust(size))
+            strings[i] = s[size:]
+
+        result.append((" " * space).join(line))
+    
+    return "\n".join(result)

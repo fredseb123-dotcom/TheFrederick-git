@@ -4,9 +4,8 @@
 
 prefix : "."
 description : "NoctaneBuilds"
-path: ""
-cogs_path : "cogs"
 error_timeout: 10
+cmd_cooldown: 10
 
 #------
 # GUILD
@@ -28,3 +27,14 @@ ticket_category_id: 864083901676126208
 # Roles
 join_role_id: 842125244563062834
 support_role_id: 858090235321909248
+mute_role_id: 69420 # takže doplnit ty kar
+
+#------
+# CLEAR
+#------
+
+clear_limit: 20
+clear_blacklisted_channels_ids:
+  - 865530660378771468
+  - 864081563951431680
+  - 858089548256641064

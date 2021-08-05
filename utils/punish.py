@@ -1,12 +1,12 @@
 """
-Práce s ukládáním ticketů
+Práce se zápisem trestů
 """
 
 import sqlite3
 
 
-def write_data(channel_id: int, member_id: int):
-    """Zápis dat o ticketu"""
+def write_punish(channel_id: int, member_id: int):
+    """Zápis dat o trestu"""
 
     conn = sqlite3.connect("storage.db")
     cursor = conn.cursor()
@@ -14,6 +14,13 @@ def write_data(channel_id: int, member_id: int):
     conn.commit()
     conn.close()
 
+def write_temp_punish():
+
+    conn = sqlite3.connect("storage.db")
+    cursor = conn.cursor()
+    cursor.execute(f"""INSERT INTO tickets VALUES ('{channel_id}', '{member_id}')""")
+    conn.commit()
+    conn.close()
 
 def has_ticket(member_id: int):
     """Check, zda je ID v DB"""

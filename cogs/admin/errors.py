@@ -44,6 +44,8 @@ class Errors(commands.Cog):
         if isinstance(error, commands.MissingPermissions):
             await ctx.message.reply("Na toto nemám oprávnění", delete_after=time)
 
+        if isinstance(error, commands.CommandOnCooldown):
+            await ctx.message.reply(f"Časové omezení, zbývá {round(error.retry_after)} sekund", delete_after=time)
 
 def setup(client):
     """Načtení modulu"""

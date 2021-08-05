@@ -14,7 +14,8 @@ class Help(commands.Cog):
 
     @commands.command()
     async def help(self, ctx):
-        """Zaslání hodnoty odezvy"""
+        """Zaslání výpisu příkazů"""
+
         if ctx.channel.id != load_cfg("bot_spam_id"):
             await ctx.message.delete()
             return
