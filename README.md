@@ -17,4 +17,6 @@ My name is **TheFrederick**,
 
 <br />
 <br />
-  ![Stats](https://github-readme-stats.vercel.app/api?username=TheFrederick-git&show_icons=true&theme=slateorange)
+<br>
+  ![My Stats](https://github-readme-stats.vercel.app/api?username=TheFrederick-git&show_icons=true&theme=slateorange)
+</br>
