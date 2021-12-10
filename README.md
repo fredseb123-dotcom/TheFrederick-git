@@ -19,4 +19,4 @@ My name is **TheFrederick**,
 <br />
 <br>
 
-  ![TheFrederick's github stats]("https://github-readme-stats.vercel.app/api?username=TheFrederick-git&show_icons=true&theme=slateorange")
+  ![TheFrederick's github stats](https://github-readme-stats.vercel.app/api?username=TheFrederick-git&show_icons=true&theme=slateorange)
