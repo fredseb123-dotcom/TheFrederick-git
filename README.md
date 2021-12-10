@@ -17,12 +17,4 @@ My name is **TheFrederick**,
 
 <br />
 <br />
-
-<br><br>
-
-  ![Vojtěch Gistr's github stats](https://github-readme-stats.vercel.app/api?username=TheFrederick-git&show_icons=true&theme=slateorange)
-
-<br>
-
-### Conntact
-[Web page](https://thefrederick.xyz)
+  ![Stats](https://github-readme-stats.vercel.app/api?username=TheFrederick-git&show_icons=true&theme=slateorange)
