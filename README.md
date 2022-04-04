@@ -2,7 +2,7 @@
 
 My name is **TheFrederick**,
 
-➤ 🔭 I’m currently working for [Artificial Void]("https://artificialvoid.com/")
+➤ 🔭 I’m currently working for ![Artificial Void]("https://artificialvoid.com/")
 
 ### Languages and Tools:
 
